@@ -221,6 +221,7 @@ export default function JobMate() {
   const [invoices,  setInvoices]  = useState<any[]>([]);
   const [quotes,    setQuotes]    = useState<any[]>([]);
   const [calDate,   setCalDate]   = useState(new Date());
+  const [selDay,    setSelDay]    = useState<number|null>(null);
   const [notif,     setNotif]     = useState<string|null>(null);
   // ── modals ──
   const [vModal,    setVModal]    = useState(false);
@@ -517,7 +518,6 @@ export default function JobMate() {
 
   // ═══ JOBS (list + calendar) ══════════════════════════
   const renderJobs = () => {
-    const [selDay, setSelDay] = useState<number|null>(null);
     const daysInMonth = calDaysInMonth(calDate);
     const firstDay   = calFirstDay(calDate);
     const todayDate  = new Date();
@@ -994,4 +994,3 @@ export default function JobMate() {
     </div>
   );
 }
-
