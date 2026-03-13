@@ -370,64 +370,64 @@ export default function App() {
     root:    { maxWidth:430, margin:"0 auto", minHeight:"100vh", background:"#090909", color:"#f0ede8", fontFamily:"'DM Sans','Helvetica Neue',sans-serif", position:"relative", overflowX:"hidden" },
     hdr:     { padding:"24px 20px 0", background:"linear-gradient(180deg,#111 0%,#090909 100%)" },
     logoRow: { display:"flex", alignItems:"center", gap:8 },
-    logo:    { fontSize:18, fontWeight:900, color:"#f0ede8", letterSpacing:-0.5 },
+    logo:    { fontSize:24, fontWeight:900, color:"#f0ede8", letterSpacing:-0.5 },
     dot:     { width:8, height:8, borderRadius:"50%", background:ac },
-    tag:     { fontSize:11, color:ac, background:ac+"22", borderRadius:20, padding:"3px 10px", fontWeight:700, border:`1px solid ${ac}44` },
-    swBtn:   { fontSize:11, color:"#555", background:"#161616", border:"1px solid #1e1e1e", borderRadius:20, padding:"4px 10px", cursor:"pointer" },
+    tag:     { fontSize:12, color:ac, background:ac+"22", borderRadius:20, padding:"3px 10px", fontWeight:700, border:`1px solid ${ac}44` },
+    swBtn:   { fontSize:13, color:"#555", background:"#161616", border:"1px solid #1e1e1e", borderRadius:20, padding:"4px 10px", cursor:"pointer" },
     actRow:  { display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:10, padding:"14px 20px" },
     actBtn:  (hi:boolean)=>({ display:"flex", flexDirection:"column", alignItems:"center", gap:5, padding:"14px 8px", background:hi?ac:"#141414", border:hi?"none":"1px solid #1e1e1e", borderRadius:16, cursor:"pointer" }),
-    actLbl:  (hi:boolean)=>({ fontSize:11, fontWeight:800, color:hi?"#0a0a0a":"#666" }),
+    actLbl:  (hi:boolean)=>({ fontSize:19, fontWeight:800, color:hi?"#0a0a0a":"#666" }),
     statRow: { display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:8, padding:"0 20px 18px" },
     stat:    (c:string)=>({ background:"#141414", borderRadius:14, padding:"11px", borderBottom:`2px solid ${c}`, cursor:"pointer" }),
-    statV:   (c:string)=>({ fontSize:17, fontWeight:900, color:c, letterSpacing:-0.5, lineHeight:1 }),
-    statL:   { fontSize:10, color:"#333", fontWeight:700, textTransform:"uppercase", letterSpacing:0.5, marginTop:4 },
+    statV:   (c:string)=>({ fontSize:28, fontWeight:900, color:c, letterSpacing:-0.5, lineHeight:1 }),
+    statL:   { fontSize:12, color:"#333", fontWeight:700, textTransform:"uppercase", letterSpacing:0.5, marginTop:4 },
     sec:     { padding:"0 20px", marginBottom:22 },
     secHdr:  { display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:10 },
-    secT:    { fontSize:11, fontWeight:800, color:"#2a2a2a", textTransform:"uppercase", letterSpacing:1 },
-    secA:    { fontSize:12, color:ac, fontWeight:700, cursor:"pointer" },
+    secT:    { fontSize:13, fontWeight:800, color:"#2a2a2a", textTransform:"uppercase", letterSpacing:1 },
+    secA:    { fontSize:17, color:ac, fontWeight:700, cursor:"pointer" },
     jCard:   (s:string)=>({ background:"#141414", borderRadius:16, padding:"13px 15px", marginBottom:9, borderLeft:`3px solid ${SC[s]||"#222"}`, cursor:"pointer" }),
     jTop:    { display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:2 },
-    jTime:   { fontSize:11, color:"#444", fontWeight:700 },
-    jStat:   (s:string)=>({ fontSize:10, fontWeight:700, color:SC[s], background:SC[s]+"20", borderRadius:20, padding:"2px 8px" }),
-    jName:   { fontSize:16, fontWeight:800, color:"#f0ede8", letterSpacing:-0.3 },
-    jType:   { fontSize:11, color:ac, marginTop:2 },
-    jAddr:   { fontSize:11, color:"#2a2a2a", marginTop:2 },
+    jTime:   { fontSize:14, color:"#444", fontWeight:700 },
+    jStat:   (s:string)=>({ fontSize:13, fontWeight:700, color:SC[s], background:SC[s]+"20", borderRadius:20, padding:"2px 8px" }),
+    jName:   { fontSize:24, fontWeight:800, color:"#f0ede8", letterSpacing:-0.3 },
+    jType:   { fontSize:19, color:ac, marginTop:2 },
+    jAddr:   { fontSize:17, color:"#2a2a2a", marginTop:2 },
     jBot:    { display:"flex", justifyContent:"space-between", alignItems:"center", marginTop:9 },
-    jPrice:  { fontSize:19, fontWeight:900, color:"#f0ede8", letterSpacing:-0.5 },
-    jSub:    { fontSize:10, color:"#2a2a2a" },
-    dBtn:    { padding:"8px 15px", background:ac, border:"none", borderRadius:10, color:"#0a0a0a", fontWeight:800, fontSize:12, cursor:"pointer" },
+    jPrice:  { fontSize:28, fontWeight:900, color:"#f0ede8", letterSpacing:-0.5 },
+    jSub:    { fontSize:15, color:"#2a2a2a" },
+    dBtn:    { padding:"8px 15px", background:ac, border:"none", borderRadius:10, color:"#0a0a0a", fontWeight:800, fontSize:17, cursor:"pointer" },
     iCard:   (s:string)=>({ background:"#141414", borderRadius:16, padding:"13px 15px", marginBottom:9, borderLeft:`3px solid ${IC[s]||"#222"}` }),
-    iName:   { fontSize:15, fontWeight:800, color:"#f0ede8" },
-    iType:   { fontSize:11, color:"#444", marginTop:2 },
-    iStat:   (s:string)=>({ fontSize:10, fontWeight:700, color:IC[s], background:IC[s]+"20", borderRadius:20, padding:"2px 8px" }),
-    iAmt:    (s:string)=>({ fontSize:19, fontWeight:900, color:s==="overdue"?"#f87171":s==="paid"?"#22c55e":"#f0ede8", letterSpacing:-0.5 }),
+    iName:   { fontSize:24, fontWeight:800, color:"#f0ede8" },
+    iType:   { fontSize:19, color:"#444", marginTop:2 },
+    iStat:   (s:string)=>({ fontSize:15, fontWeight:700, color:IC[s], background:IC[s]+"20", borderRadius:20, padding:"2px 8px" }),
+    iAmt:    (s:string)=>({ fontSize:28, fontWeight:900, color:s==="overdue"?"#f87171":s==="paid"?"#22c55e":"#f0ede8", letterSpacing:-0.5 }),
     iBtns:   { display:"flex", gap:7, marginTop:9 },
-    iBtn:    (c:string)=>({ flex:1, padding:"8px", background:"#1a1a1a", border:`1px solid ${c}30`, borderRadius:10, color:c, fontSize:12, fontWeight:700, cursor:"pointer" }),
+    iBtn:    (c:string)=>({ flex:1, padding:"9px", background:"#1a1a1a", border:`1px solid ${c}30`, borderRadius:10, color:c, fontSize:17, fontWeight:700, cursor:"pointer" }),
     cCard:   { background:"#141414", borderRadius:16, padding:"13px 15px", marginBottom:9 },
     cBtns:   { display:"flex", gap:6, marginTop:11 },
-    cBtn:    (c:string)=>({ flex:1, padding:"7px", background:"#1a1a1a", border:"1px solid #1a1a1a", borderRadius:10, color:c, fontSize:11, fontWeight:700, cursor:"pointer" }),
+    cBtn:    (c:string)=>({ flex:1, padding:"7px", background:"#1a1a1a", border:"1px solid #1a1a1a", borderRadius:10, color:c, fontSize:17, fontWeight:700, cursor:"pointer" }),
     nav:     { position:"fixed", bottom:0, left:"50%", transform:"translateX(-50%)", width:"100%", maxWidth:430, background:"#0e0e0e", borderTop:"1px solid #181818", display:"grid", gridTemplateColumns:"repeat(6,1fr)", padding:"7px 0 22px", zIndex:100 },
     nItem:   (a:boolean)=>({ display:"flex", flexDirection:"column", alignItems:"center", gap:2, cursor:"pointer", padding:"4px 0", opacity:a?1:0.28 }),
-    nLbl:    (a:boolean)=>({ fontSize:9, fontWeight:700, color:a?ac:"#333" }),
+    nLbl:    (a:boolean)=>({ fontSize:11, fontWeight:700, color:a?ac:"#333" }),
     overlay: { position:"fixed", inset:0, background:"#000c", backdropFilter:"blur(6px)", display:"flex", alignItems:"flex-end", justifyContent:"center", zIndex:999 },
     sheet:   { background:"#141414", borderRadius:"24px 24px 0 0", padding:"22px 20px 44px", width:"100%", maxWidth:430, border:"1px solid #1e1e1e", maxHeight:"92vh", overflowY:"auto" as any },
     handle:  { width:40, height:4, background:"#252525", borderRadius:2, margin:"0 auto 18px" },
-    sTitle:  { fontSize:20, fontWeight:900, color:"#f0ede8", marginBottom:3, letterSpacing:-0.5 },
-    sSub:    { fontSize:13, color:"#444", marginBottom:18 },
+    sTitle:  { fontSize:28, fontWeight:900, color:"#f0ede8", marginBottom:3, letterSpacing:-0.5 },
+    sSub:    { fontSize:16, color:"#444", marginBottom:18 },
     micBtn:  (s:string)=>({ width:88, height:88, borderRadius:"50%", border:"none", background:s==="listening"?"#ef4444":ac, display:"flex", alignItems:"center", justifyContent:"center", fontSize:34, cursor:"pointer", margin:"0 auto 18px", boxShadow:s==="listening"?"0 0 0 14px #ef444420,0 0 0 28px #ef444410":`0 0 0 10px ${ac}25`, transition:"all 0.3s" }),
-    vDisp:   { background:"#0a0a0a", borderRadius:12, padding:"13px", marginBottom:14, minHeight:54, fontSize:13, color:"#94a3b8", lineHeight:1.6, border:"1px solid #1a1a1a" },
+    vDisp:   { background:"#0a0a0a", borderRadius:12, padding:"13px", marginBottom:14, minHeight:54, fontSize:19, color:"#94a3b8", lineHeight:1.6, border:"1px solid #1a1a1a" },
     aiCard:  { background:"#0a0a0a", borderRadius:12, padding:"13px", marginBottom:14, border:`1px solid ${ac}28` },
     aiRow:   { display:"flex", justifyContent:"space-between", padding:"5px 0", borderBottom:"1px solid #141414" },
-    aiK:     { fontSize:12, color:"#444", fontWeight:600 },
-    aiV:     { fontSize:12, color:"#f0ede8", fontWeight:700 },
+    aiK:     { fontSize:22, color:"#444", fontWeight:600 },
+    aiV:     { fontSize:22, color:"#f0ede8", fontWeight:700 },
     fField:  { marginBottom:11 },
-    fLbl:    { fontSize:10, color:"#444", fontWeight:700, letterSpacing:0.8, textTransform:"uppercase", display:"block", marginBottom:5 },
-    fInp:    { width:"100%", padding:"11px 13px", background:"#0a0a0a", border:"1px solid #1e1e1e", borderRadius:11, color:"#f0ede8", fontSize:14, outline:"none", boxSizing:"border-box" as any },
-    fSel:    { width:"100%", padding:"11px 13px", background:"#0a0a0a", border:"1px solid #1e1e1e", borderRadius:11, color:"#f0ede8", fontSize:13, outline:"none", boxSizing:"border-box" as any },
+    fLbl:    { fontSize:13, color:"#444", fontWeight:700, letterSpacing:0.8, textTransform:"uppercase", display:"block", marginBottom:5 },
+    fInp:    { width:"100%", padding:"12px 14px", background:"#0a0a0a", border:"1px solid #1e1e1e", borderRadius:11, color:"#f0ede8", fontSize:22, outline:"none", boxSizing:"border-box" as any },
+    fSel:    { width:"100%", padding:"12px 14px", background:"#0a0a0a", border:"1px solid #1e1e1e", borderRadius:11, color:"#f0ede8", fontSize:22, outline:"none", boxSizing:"border-box" as any },
     fRow:    { display:"grid", gridTemplateColumns:"1fr 1fr", gap:9 },
     fTotal:  { background:`${ac}10`, border:`1px solid ${ac}25`, borderRadius:11, padding:"11px 13px", marginBottom:11, display:"flex", justifyContent:"space-between", alignItems:"center" },
-    bigBtn:  (c?:string)=>({ width:"100%", padding:"14px", background:c||ac, border:c==="transparent"?"1px solid #1e1e1e":"none", borderRadius:13, color:c==="transparent"?"#444":"#0a0a0a", fontSize:15, fontWeight:800, cursor:"pointer", letterSpacing:-0.3, marginBottom:8 }),
-    toast:   { position:"fixed" as any, top:20, left:"50%", transform:"translateX(-50%)", background:"#22c55e", color:"#fff", padding:"10px 20px", borderRadius:13, fontWeight:700, fontSize:13, zIndex:9999, whiteSpace:"nowrap" as any, boxShadow:"0 8px 24px #0008" },
+    bigBtn:  (c?:string)=>({ width:"100%", padding:"15px", background:c||ac, border:c==="transparent"?"1px solid #1e1e1e":"none", borderRadius:13, color:c==="transparent"?"#444":"#0a0a0a", fontSize:24, fontWeight:800, cursor:"pointer", letterSpacing:-0.3, marginBottom:8 }),
+    toast:   { position:"fixed" as any, top:20, left:"50%", transform:"translateX(-50%)", background:"#22c55e", color:"#fff", padding:"10px 20px", borderRadius:13, fontWeight:700, fontSize:19, zIndex:9999, whiteSpace:"nowrap" as any, boxShadow:"0 8px 24px #0008" },
   };
 
   const NAV = [
@@ -449,34 +449,34 @@ export default function App() {
 
       {/* NAV */}
       <div style={{ position:"fixed", top:0, left:"50%", transform:"translateX(-50%)", width:"100%", maxWidth:430, padding:"16px 20px", background:"#08080899", backdropFilter:"blur(20px)", borderBottom:"1px solid #ffffff08", display:"flex", justifyContent:"space-between", alignItems:"center", zIndex:100 }}>
-        <div style={{ display:"flex", alignItems:"center", gap:8, fontFamily:"'Syne',sans-serif", fontSize:18, fontWeight:800, color:"#f0ede8" }}>
+        <div style={{ display:"flex", alignItems:"center", gap:8, fontFamily:"'Syne',sans-serif", fontSize:24, fontWeight:800, color:"#f0ede8" }}>
           <div style={{ width:9, height:9, borderRadius:"50%", background:ac }}/>
           SimplyProject
         </div>
         <div style={{ display:"flex", gap:8 }}>
-          <button onClick={()=>setLang(lang==="en"?"zh":"en")} style={{ padding:"7px 14px", background:"#141414", border:"1px solid #1e1e1e", borderRadius:20, color:"#555", fontWeight:700, fontSize:12, cursor:"pointer" }}>{lang==="en"?"中文":"EN"}</button>
-          <button onClick={()=>setAppScreen("trade")} style={{ padding:"7px 16px", background:ac, border:"none", borderRadius:20, color:"#0a0a0a", fontWeight:800, fontSize:12, cursor:"pointer" }}>{t.get_started}</button>
+          <button onClick={()=>setLang(lang==="en"?"zh":"en")} style={{ padding:"7px 14px", background:"#141414", border:"1px solid #1e1e1e", borderRadius:20, color:"#555", fontWeight:700, fontSize:17, cursor:"pointer" }}>{lang==="en"?"中文":"EN"}</button>
+          <button onClick={()=>setAppScreen("trade")} style={{ padding:"7px 16px", background:ac, border:"none", borderRadius:20, color:"#0a0a0a", fontWeight:800, fontSize:17, cursor:"pointer" }}>{t.get_started}</button>
         </div>
       </div>
 
       {/* HERO */}
       <div style={{ padding:"110px 24px 60px", textAlign:"center" }}>
-        <div style={{ display:"inline-flex", alignItems:"center", gap:7, background:ac+"22", border:`1px solid ${ac}30`, borderRadius:50, padding:"5px 14px", fontSize:11, color:ac, fontWeight:700, letterSpacing:1, textTransform:"uppercase", marginBottom:28 }}>
+        <div style={{ display:"inline-flex", alignItems:"center", gap:7, background:ac+"22", border:`1px solid ${ac}30`, borderRadius:50, padding:"5px 14px", fontSize:17, color:ac, fontWeight:700, letterSpacing:1, textTransform:"uppercase", marginBottom:28 }}>
           <div style={{ width:6, height:6, borderRadius:"50%", background:ac }}/>
           {lang==="zh"?"澳洲技工专属":"Built for Australian Tradies"}
         </div>
         <h1 style={{ fontFamily:"'Syne',sans-serif", fontSize:"clamp(38px,10vw,72px)", fontWeight:800, lineHeight:1.0, letterSpacing:-2, marginBottom:20, color:"#f0ede8" }}>
           {lang==="zh" ? <><span style={{color:ac}}>不再</span>追着客户付款。</> : <>Stop chasing<br/><span style={{color:ac}}>invoices.</span></>}
         </h1>
-        <p style={{ fontSize:16, color:"#666", lineHeight:1.7, marginBottom:36, maxWidth:360, margin:"0 auto 36px" }}>{t.hero_sub}</p>
+        <p style={{ fontSize:22, color:"#666", lineHeight:1.7, marginBottom:36, maxWidth:360, margin:"0 auto 36px" }}>{t.hero_sub}</p>
         <div style={{ display:"flex", gap:10, justifyContent:"center", flexWrap:"wrap" }}>
-          <button onClick={()=>setAppScreen("trade")} style={{ padding:"15px 28px", background:ac, border:"none", borderRadius:50, color:"#0a0a0a", fontWeight:800, fontSize:15, cursor:"pointer" }}>{t.try_demo}</button>
-          <button onClick={()=>document.getElementById("features")?.scrollIntoView({behavior:"smooth"})} style={{ padding:"15px 24px", background:"transparent", border:"1px solid #1e1e1e", borderRadius:50, color:"#555", fontWeight:700, fontSize:14, cursor:"pointer" }}>{t.learn_more}</button>
+          <button onClick={()=>setAppScreen("trade")} style={{ padding:"15px 28px", background:ac, border:"none", borderRadius:50, color:"#0a0a0a", fontWeight:800, fontSize:22, cursor:"pointer" }}>{t.try_demo}</button>
+          <button onClick={()=>document.getElementById("features")?.scrollIntoView({behavior:"smooth"})} style={{ padding:"15px 24px", background:"transparent", border:"1px solid #1e1e1e", borderRadius:50, color:"#555", fontWeight:700, fontSize:22, cursor:"pointer" }}>{t.learn_more}</button>
         </div>
         {/* trades */}
         <div style={{ display:"flex", gap:8, flexWrap:"wrap", justifyContent:"center", marginTop:40 }}>
           {Object.values(IND).map((i:any)=>(
-            <div key={i.en} style={{ display:"flex", alignItems:"center", gap:6, background:"#141414", border:"1px solid #1e1e1e", borderRadius:50, padding:"7px 14px", fontSize:12, color:"#555", fontWeight:600 }}>
+            <div key={i.en} style={{ display:"flex", alignItems:"center", gap:6, background:"#141414", border:"1px solid #1e1e1e", borderRadius:50, padding:"7px 14px", fontSize:17, color:"#555", fontWeight:600 }}>
               {i.icon} {lang==="zh"?i.zh:i.en}
             </div>
           ))}
@@ -485,7 +485,7 @@ export default function App() {
 
       {/* FEATURES */}
       <div id="features" style={{ padding:"60px 20px" }}>
-        <div style={{ fontSize:11, color:ac, fontWeight:700, letterSpacing:2, textTransform:"uppercase", marginBottom:14, textAlign:"center" }}>
+        <div style={{ fontSize:17, color:ac, fontWeight:700, letterSpacing:2, textTransform:"uppercase", marginBottom:14, textAlign:"center" }}>
           {lang==="zh"?"核心功能":"Why SimplyProject"}
         </div>
         <h2 style={{ fontFamily:"'Syne',sans-serif", fontSize:32, fontWeight:800, letterSpacing:-1, textAlign:"center", marginBottom:32, lineHeight:1.2 }}>
@@ -501,9 +501,9 @@ export default function App() {
             ["💬",t.feat6_t,t.feat6_d],
           ].map(([icon,title,desc])=>(
             <div key={title as string} style={{ background:"#141414", border:"1px solid #1e1e1e", borderRadius:16, padding:"18px 16px" }}>
-              <div style={{ fontSize:26, marginBottom:10 }}>{icon}</div>
-              <div style={{ fontSize:13, fontWeight:800, color:"#f0ede8", marginBottom:6, lineHeight:1.3 }}>{title}</div>
-              <div style={{ fontSize:11, color:"#444", lineHeight:1.6 }}>{desc}</div>
+              <div style={{ fontSize:32, marginBottom:10 }}>{icon}</div>
+              <div style={{ fontSize:19, fontWeight:800, color:"#f0ede8", marginBottom:6, lineHeight:1.3 }}>{title}</div>
+              <div style={{ fontSize:17, color:"#444", lineHeight:1.6 }}>{desc}</div>
             </div>
           ))}
         </div>
@@ -511,16 +511,16 @@ export default function App() {
 
       {/* PRICING */}
       <div style={{ padding:"40px 20px 60px" }}>
-        <h2 style={{ fontFamily:"'Syne',sans-serif", fontSize:28, fontWeight:800, letterSpacing:-1, textAlign:"center", marginBottom:24 }}>
+        <h2 style={{ fontFamily:"'Syne',sans-serif", fontSize:35, fontWeight:800, letterSpacing:-1, textAlign:"center", marginBottom:24 }}>
           {lang==="zh"?"简单定价":"Simple pricing."}
         </h2>
         <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:10 }}>
           {[["Free","$0","forever",["Basic jobs","10 clients","Voice entry"]],["Pro","$19","/month",["Unlimited","All features","Calendar"]],["Team","$29","/month",["Pro + 5 accounts","Team visibility"]],["Payroll","$39","/month",["Team + STP","Staff pay"]]].map(([plan,price,period,features]:any)=>(
             <div key={plan} style={{ background:plan==="Pro"?ac:"#141414", border:`1px solid ${plan==="Pro"?ac:"#1e1e1e"}`, borderRadius:16, padding:"18px 16px" }}>
-              <div style={{ fontSize:10, fontWeight:700, color:plan==="Pro"?"#0007":"#555", textTransform:"uppercase", letterSpacing:1, marginBottom:8 }}>{plan}</div>
-              <div style={{ fontSize:28, fontWeight:900, color:plan==="Pro"?"#0a0a0a":"#f0ede8", letterSpacing:-1 }}>{price}</div>
-              <div style={{ fontSize:11, color:plan==="Pro"?"#0007":"#333", marginBottom:14 }}>{period}</div>
-              {features.map((f:string)=><div key={f} style={{ fontSize:11, color:plan==="Pro"?"#0a0a0a":"#555", marginBottom:4 }}>✓ {f}</div>)}
+              <div style={{ fontSize:15, fontWeight:700, color:plan==="Pro"?"#0007":"#555", textTransform:"uppercase", letterSpacing:1, marginBottom:8 }}>{plan}</div>
+              <div style={{ fontSize:35, fontWeight:900, color:plan==="Pro"?"#0a0a0a":"#f0ede8", letterSpacing:-1 }}>{price}</div>
+              <div style={{ fontSize:17, color:plan==="Pro"?"#0007":"#333", marginBottom:14 }}>{period}</div>
+              {features.map((f:string)=><div key={f} style={{ fontSize:17, color:plan==="Pro"?"#0a0a0a":"#555", marginBottom:4 }}>✓ {f}</div>)}
             </div>
           ))}
         </div>
@@ -531,15 +531,15 @@ export default function App() {
         <h2 style={{ fontFamily:"'Syne',sans-serif", fontSize:32, fontWeight:800, letterSpacing:-1, marginBottom:16 }}>
           {lang==="zh"?<>准备好了？<br/><span style={{color:ac}}>免费开始</span></>:<>Ready to get<br/><span style={{color:ac}}>paid faster?</span></>}
         </h2>
-        <p style={{ color:"#444", fontSize:14, marginBottom:28 }}>{lang==="zh"?"免费体验，无需注册":"Free to try. No sign-up required."}</p>
-        <button onClick={()=>setAppScreen("trade")} style={{ padding:"16px 36px", background:ac, border:"none", borderRadius:50, color:"#0a0a0a", fontWeight:800, fontSize:16, cursor:"pointer", marginBottom:12 }}>🎙️ {t.try_demo}</button>
-        <div style={{ fontSize:12, color:"#333" }}>{t.built_au}</div>
+        <p style={{ color:"#444", fontSize:22, marginBottom:28 }}>{lang==="zh"?"免费体验，无需注册":"Free to try. No sign-up required."}</p>
+        <button onClick={()=>setAppScreen("trade")} style={{ padding:"16px 36px", background:ac, border:"none", borderRadius:50, color:"#0a0a0a", fontWeight:800, fontSize:22, cursor:"pointer", marginBottom:12 }}>🎙️ {t.try_demo}</button>
+        <div style={{ fontSize:17, color:"#333" }}>{t.built_au}</div>
       </div>
 
       {/* FOOTER */}
       <div style={{ padding:"20px 24px 40px", borderTop:"1px solid #1a1a1a", display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:10 }}>
         <div style={{ display:"flex", alignItems:"center", gap:8, fontFamily:"'Syne',sans-serif", fontWeight:800, color:"#f0ede8" }}><div style={{ width:7, height:7, borderRadius:"50%", background:ac }}/>SimplyProject</div>
-        <div style={{ fontSize:11, color:"#333" }}>© 2026 Future One Pty Ltd · <a href="https://futureone.au" style={{color:"#444",textDecoration:"none"}}>futureone.au</a></div>
+        <div style={{ fontSize:17, color:"#333" }}>© 2026 Future One Pty Ltd · <a href="https://futureone.au" style={{color:"#444",textDecoration:"none"}}>futureone.au</a></div>
       </div>
     </div>
   );
@@ -549,24 +549,24 @@ export default function App() {
     <div style={S.root}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800;900&display=swap');*{-webkit-tap-highlight-color:transparent;box-sizing:border-box;}button,input,select{font-family:inherit;}select option{background:#141414;}`}</style>
       <div style={{ padding:"50px 22px 48px" }}>
-        <button onClick={()=>setAppScreen("landing")} style={{ fontSize:13, color:"#444", background:"transparent", border:"none", cursor:"pointer", marginBottom:24, padding:0 }}>← Back</button>
+        <button onClick={()=>setAppScreen("landing")} style={{ fontSize:19, color:"#444", background:"transparent", border:"none", cursor:"pointer", marginBottom:24, padding:0 }}>← Back</button>
         <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
           <div style={{ width:9,height:9,borderRadius:"50%",background:ac }}/>
-          <div style={{ fontSize:21,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5 }}>SimplyProject</div>
+          <div style={{ fontSize:28,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5 }}>SimplyProject</div>
         </div>
-        <div style={{ fontSize:14,color:"#333",marginBottom:28 }}>{t.whats_trade}</div>
+        <div style={{ fontSize:22,color:"#333",marginBottom:28 }}>{t.whats_trade}</div>
         <div style={{ display:"grid",gridTemplateColumns:"1fr 1fr",gap:11 }}>
           {Object.entries(IND).map(([k,i]:any)=>(
             <div key={k} onClick={()=>pickIndustry(k)} style={{ background:"#141414",borderRadius:17,padding:"19px 15px",cursor:"pointer",border:`1px solid ${i.color||ac}28`,textAlign:"center" }}>
-              <div style={{ fontSize:30,marginBottom:7 }}>{i.icon}</div>
-              <div style={{ fontSize:14,fontWeight:800,color:"#f0ede8",marginBottom:3 }}>{lang==="zh"?i.zh:i.en}</div>
-              <div style={{ fontSize:10,color:i.color||ac,fontWeight:600 }}>{lang==="zh"?i.billingZh[0]:i.billing[0]}</div>
+              <div style={{ fontSize:38,marginBottom:7 }}>{i.icon}</div>
+              <div style={{ fontSize:22,fontWeight:800,color:"#f0ede8",marginBottom:3 }}>{lang==="zh"?i.zh:i.en}</div>
+              <div style={{ fontSize:15,color:i.color||ac,fontWeight:600 }}>{lang==="zh"?i.billingZh[0]:i.billing[0]}</div>
             </div>
           ))}
         </div>
         <div style={{ display:"flex",justifyContent:"center",gap:10,marginTop:24 }}>
           {[["en","🇦🇺 English"],["zh","🇨🇳 中文"]].map(([k,lbl])=>(
-            <button key={k} onClick={()=>setLang(k as any)} style={{ padding:"6px 16px", background:lang===k?ac:"#141414", border:"1px solid #1e1e1e", borderRadius:20, color:lang===k?"#0a0a0a":"#555", fontWeight:700, fontSize:12, cursor:"pointer" }}>{lbl}</button>
+            <button key={k} onClick={()=>setLang(k as any)} style={{ padding:"6px 16px", background:lang===k?ac:"#141414", border:"1px solid #1e1e1e", borderRadius:20, color:lang===k?"#0a0a0a":"#555", fontWeight:700, fontSize:17, cursor:"pointer" }}>{lbl}</button>
           ))}
         </div>
       </div>
@@ -585,14 +585,14 @@ export default function App() {
           </div>
         </div>
         <div style={{ paddingBottom:16 }}>
-          <div style={{ fontSize:20,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5 }}>{greeting} 👋</div>
-          <div style={{ fontSize:12,color:"#2a2a2a",marginTop:2 }}>{new Date().toLocaleDateString(lang==="zh"?"zh-CN":"en-AU",{weekday:"long",day:"numeric",month:"long"})}</div>
+          <div style={{ fontSize:29,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5 }}>{greeting} 👋</div>
+          <div style={{ fontSize:17,color:"#2a2a2a",marginTop:2 }}>{new Date().toLocaleDateString(lang==="zh"?"zh-CN":"en-AU",{weekday:"long",day:"numeric",month:"long"})}</div>
         </div>
       </div>
       <div style={S.actRow}>
-        <button style={S.actBtn(false)} onClick={()=>setNewJobM(true)}><div style={{fontSize:22}}>➕</div><div style={S.actLbl(false)}>{t.new_job}</div></button>
-        <button style={S.actBtn(true)}  onClick={()=>{setVModal(true);setVState("idle");}}><div style={{fontSize:22}}>🎙️</div><div style={S.actLbl(true)}>{t.voice_job}</div></button>
-        <button style={S.actBtn(false)} onClick={()=>setNewInvM(true)}><div style={{fontSize:22}}>🧾</div><div style={S.actLbl(false)}>{t.send_invoice}</div></button>
+        <button style={S.actBtn(false)} onClick={()=>setNewJobM(true)}><div style={{fontSize:28}}>➕</div><div style={S.actLbl(false)}>{t.new_job}</div></button>
+        <button style={S.actBtn(true)}  onClick={()=>{setVModal(true);setVState("idle");}}><div style={{fontSize:28}}>🎙️</div><div style={S.actLbl(true)}>{t.voice_job}</div></button>
+        <button style={S.actBtn(false)} onClick={()=>setNewInvM(true)}><div style={{fontSize:28}}>🧾</div><div style={S.actLbl(false)}>{t.send_invoice}</div></button>
       </div>
       <div style={S.statRow}>
         <div style={S.stat("#22c55e")} onClick={()=>setScreen("jobs")}><div style={S.statV("#22c55e")}>{fmt(todayRev)}</div><div style={S.statL}>{t.money_in}</div></div>
@@ -602,15 +602,15 @@ export default function App() {
       {overdueInvs.length>0&&(
         <div style={{ margin:"0 20px 18px",background:"#f8717115",border:"1px solid #f8717130",borderRadius:13,padding:"11px 15px",display:"flex",justifyContent:"space-between",alignItems:"center" }}>
           <div>
-            <div style={{ fontSize:13,fontWeight:800,color:"#f87171" }}>⚠️ {overdueInvs.length} {t.overdue_alert}{overdueInvs.length>1?"s":""}</div>
-            <div style={{ fontSize:11,color:"#555",marginTop:2 }}>{overdueInvs.map((i:any)=>i.customerName).join(", ")}</div>
+            <div style={{ fontSize:19,fontWeight:800,color:"#f87171" }}>⚠️ {overdueInvs.length} {t.overdue_alert}{overdueInvs.length>1?"s":""}</div>
+            <div style={{ fontSize:17,color:"#555",marginTop:2 }}>{overdueInvs.map((i:any)=>i.customerName).join(", ")}</div>
           </div>
-          <button style={{ padding:"7px 13px",background:"#f87171",border:"none",borderRadius:10,color:"#fff",fontWeight:800,fontSize:12,cursor:"pointer" }} onClick={()=>setScreen("invoices")}>{t.view_arrow}</button>
+          <button style={{ padding:"7px 13px",background:"#f87171",border:"none",borderRadius:10,color:"#fff",fontWeight:800,fontSize:17,cursor:"pointer" }} onClick={()=>setScreen("invoices")}>{t.view_arrow}</button>
         </div>
       )}
       <div style={S.sec}>
         <div style={S.secHdr}><div style={S.secT}>{t.todays_jobs}</div><div style={S.secA} onClick={()=>setScreen("jobs")}>{t.see_all}</div></div>
-        {todayJobs.length===0&&<div style={{ textAlign:"center",padding:"22px 0",color:"#2a2a2a",fontSize:13 }}>{t.no_jobs}</div>}
+        {todayJobs.length===0&&<div style={{ textAlign:"center",padding:"22px 0",color:"#2a2a2a",fontSize:19 }}>{t.no_jobs}</div>}
         {todayJobs.slice(0,3).map((j:any)=>(
           <div key={j.id} style={S.jCard(j.status)} onClick={()=>setJobDetail(j)}>
             <div style={S.jTop}><div style={S.jTime}>{j.time}</div><span style={S.jStat(j.status)}>{j.status==="done"?t.done_status:j.status==="in-progress"?t.inprog_status:t.upcoming_status}</span></div>
@@ -665,42 +665,42 @@ export default function App() {
         <div style={S.hdr}>
           <div style={S.logoRow}><div style={S.dot}/><div style={S.logo}>SimplyProject</div></div>
           <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center",paddingBottom:14 }}>
-            <div style={{ fontSize:20,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5 }}>{t.jobs} 🔩</div>
+            <div style={{ fontSize:28,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5 }}>{t.jobs} 🔩</div>
             <div style={{ display:"flex",gap:8,alignItems:"center" }}>
               <div style={{ display:"flex",background:"#141414",borderRadius:10,overflow:"hidden",border:"1px solid #1e1e1e" }}>
-                <button onClick={()=>setCalView(false)} style={{ padding:"6px 12px",background:!calView?ac:"transparent",border:"none",color:!calView?"#0a0a0a":"#555",fontWeight:700,fontSize:11,cursor:"pointer" }}>{t.list_view}</button>
-                <button onClick={()=>setCalView(true)}  style={{ padding:"6px 12px",background:calView ?ac:"transparent",border:"none",color:calView ?"#0a0a0a":"#555",fontWeight:700,fontSize:11,cursor:"pointer" }}>{t.cal_view}</button>
+                <button onClick={()=>setCalView(false)} style={{ padding:"6px 12px",background:!calView?ac:"transparent",border:"none",color:!calView?"#0a0a0a":"#555",fontWeight:700,fontSize:17,cursor:"pointer" }}>{t.list_view}</button>
+                <button onClick={()=>setCalView(true)}  style={{ padding:"6px 12px",background:calView ?ac:"transparent",border:"none",color:calView ?"#0a0a0a":"#555",fontWeight:700,fontSize:17,cursor:"pointer" }}>{t.cal_view}</button>
               </div>
-              <button style={{ padding:"7px 14px",background:ac,border:"none",borderRadius:11,color:"#0a0a0a",fontWeight:800,fontSize:12,cursor:"pointer" }} onClick={()=>setNewJobM(true)}>+ {t.new_job}</button>
+              <button style={{ padding:"7px 14px",background:ac,border:"none",borderRadius:11,color:"#0a0a0a",fontWeight:800,fontSize:17,cursor:"pointer" }} onClick={()=>setNewJobM(true)}>+ {t.new_job}</button>
             </div>
           </div>
         </div>
         {calView?(
           <div style={{ padding:"0 20px" }}>
             <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14,paddingTop:8 }}>
-              <button onClick={()=>setCalDate(d=>{const x=new Date(d);x.setMonth(x.getMonth()-1);return x;})} style={{ width:32,height:32,borderRadius:"50%",background:"#141414",border:"1px solid #1e1e1e",color:"#f0ede8",fontSize:16,cursor:"pointer" }}>‹</button>
-              <div style={{ fontWeight:800,fontSize:15,color:"#f0ede8" }}>{calDate.toLocaleDateString(lang==="zh"?"zh-CN":"en-AU",{month:"long",year:"numeric"})}</div>
-              <button onClick={()=>setCalDate(d=>{const x=new Date(d);x.setMonth(x.getMonth()+1);return x;})} style={{ width:32,height:32,borderRadius:"50%",background:"#141414",border:"1px solid #1e1e1e",color:"#f0ede8",fontSize:16,cursor:"pointer" }}>›</button>
+              <button onClick={()=>setCalDate(d=>{const x=new Date(d);x.setMonth(x.getMonth()-1);return x;})} style={{ width:32,height:32,borderRadius:"50%",background:"#141414",border:"1px solid #1e1e1e",color:"#f0ede8",fontSize:22,cursor:"pointer" }}>‹</button>
+              <div style={{ fontWeight:800,fontSize:22,color:"#f0ede8" }}>{calDate.toLocaleDateString(lang==="zh"?"zh-CN":"en-AU",{month:"long",year:"numeric"})}</div>
+              <button onClick={()=>setCalDate(d=>{const x=new Date(d);x.setMonth(x.getMonth()+1);return x;})} style={{ width:32,height:32,borderRadius:"50%",background:"#141414",border:"1px solid #1e1e1e",color:"#f0ede8",fontSize:22,cursor:"pointer" }}>›</button>
             </div>
             <div style={{ display:"grid",gridTemplateColumns:"repeat(7,1fr)",marginBottom:6 }}>
-              {t.week_days.map((d:string)=><div key={d} style={{ textAlign:"center",fontSize:9,fontWeight:700,color:"#333",padding:"4px 0" }}>{d}</div>)}
+              {t.week_days.map((d:string)=><div key={d} style={{ textAlign:"center",fontSize:13,fontWeight:700,color:"#333",padding:"4px 0" }}>{d}</div>)}
             </div>
             <div style={{ display:"grid",gridTemplateColumns:"repeat(7,1fr)",gap:3 }}>
               {Array.from({length:firstDay}).map((_,i)=><div key={`e${i}`}/>)}
               {Array.from({length:daysInMonth}).map((_,i)=>{
                 const day=i+1,dayJobs=jobsOnDay(day),isSel=selDay===day,isTod=isToday(day);
                 return <div key={day} onClick={()=>setSelDay(isSel?null:day)} style={{ borderRadius:10,padding:"6px 4px",background:isSel?ac:isTod?"#1e1e1e":"#141414",border:isTod?`1px solid ${ac}50`:"1px solid transparent",cursor:"pointer",minHeight:52 }}>
-                  <div style={{ textAlign:"center",fontSize:13,fontWeight:isTod||isSel?900:500,color:isSel?"#0a0a0a":isTod?ac:"#666",marginBottom:3 }}>{day}</div>
+                  <div style={{ textAlign:"center",fontSize:19,fontWeight:isTod||isSel?900:500,color:isSel?"#0a0a0a":isTod?ac:"#666",marginBottom:3 }}>{day}</div>
                   <div style={{ display:"flex",flexWrap:"wrap",gap:2,justifyContent:"center" }}>
                     {dayJobs.slice(0,3).map((j:any,idx:number)=><div key={idx} style={{ width:6,height:6,borderRadius:"50%",background:SC[j.status]||ac }}/>)}
-                    {dayJobs.length>3&&<div style={{ fontSize:8,color:ac,fontWeight:700 }}>+{dayJobs.length-3}</div>}
+                    {dayJobs.length>3&&<div style={{ fontSize:13,color:ac,fontWeight:700 }}>+{dayJobs.length-3}</div>}
                   </div>
                 </div>;
               })}
             </div>
             {selDay&&<div style={{ marginTop:18 }}>
-              <div style={{ fontSize:10,color:"#333",fontWeight:700,textTransform:"uppercase",letterSpacing:1,marginBottom:10 }}>{selDay} {calDate.toLocaleDateString(lang==="zh"?"zh-CN":"en-AU",{month:"long"})}</div>
-              {filteredJobs.length===0&&<div style={{ textAlign:"center",padding:"20px 0",color:"#2a2a2a",fontSize:13 }}>{t.no_jobs}</div>}
+              <div style={{ fontSize:15,color:"#333",fontWeight:700,textTransform:"uppercase",letterSpacing:1,marginBottom:10 }}>{selDay} {calDate.toLocaleDateString(lang==="zh"?"zh-CN":"en-AU",{month:"long"})}</div>
+              {filteredJobs.length===0&&<div style={{ textAlign:"center",padding:"20px 0",color:"#2a2a2a",fontSize:19 }}>{t.no_jobs}</div>}
               {filteredJobs.map(jCardEl)}
             </div>}
           </div>
@@ -709,7 +709,7 @@ export default function App() {
             {["in-progress","upcoming","done"].map(status=>{
               const filtered=jobs.filter((j:any)=>j.status===status); if(!filtered.length) return null;
               const lbl:any={"in-progress":t.inprog_status,upcoming:t.upcoming_status,done:t.done_status};
-              return <div key={status}><div style={{ fontSize:10,color:SC[status],fontWeight:700,textTransform:"uppercase",letterSpacing:1,marginBottom:8,marginTop:4 }}>{lbl[status]}</div>{filtered.map(jCardEl)}</div>;
+              return <div key={status}><div style={{ fontSize:15,color:SC[status],fontWeight:700,textTransform:"uppercase",letterSpacing:1,marginBottom:8,marginTop:4 }}>{lbl[status]}</div>{filtered.map(jCardEl)}</div>;
             })}
             {jobs.length===0&&<div style={{ textAlign:"center",padding:"40px 0",color:"#2a2a2a" }}>{t.no_jobs}</div>}
           </div>
@@ -724,14 +724,14 @@ export default function App() {
       <div style={S.hdr}>
         <div style={S.logoRow}><div style={S.dot}/><div style={S.logo}>SimplyProject</div></div>
         <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center" }}>
-          <div style={{ fontSize:20,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5 }}>{t.invoices} 🧾</div>
-          <button style={{ padding:"7px 14px",background:ac,border:"none",borderRadius:11,color:"#0a0a0a",fontWeight:800,fontSize:12,cursor:"pointer" }} onClick={()=>setNewInvM(true)}>+ {t.send_invoice}</button>
+          <div style={{ fontSize:28,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5 }}>{t.invoices} 🧾</div>
+          <button style={{ padding:"7px 14px",background:ac,border:"none",borderRadius:11,color:"#0a0a0a",fontWeight:800,fontSize:17,cursor:"pointer" }} onClick={()=>setNewInvM(true)}>+ {t.send_invoice}</button>
         </div>
         <div style={{ display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:7,padding:"12px 0" }}>
           {[["#f87171",fmt(outstanding),t.money_owed],["#f59e0b",fmt(overdueInvs.reduce((s:any,i:any)=>s+i.amount,0)),t.overdue_alert],["#22c55e",fmt(invoices.filter(i=>i.paid).reduce((s:any,i:any)=>s+i.amount,0)),t.money_in]].map(([c,v,l])=>(
             <div key={l} style={{ background:"#141414",borderRadius:11,padding:"9px 11px",borderBottom:`2px solid ${c}` }}>
-              <div style={{ fontSize:15,fontWeight:900,color:c,letterSpacing:-0.5 }}>{v}</div>
-              <div style={{ fontSize:9,color:"#2a2a2a",fontWeight:700,textTransform:"uppercase",marginTop:3 }}>{l}</div>
+              <div style={{ fontSize:22,fontWeight:900,color:c,letterSpacing:-0.5 }}>{v}</div>
+              <div style={{ fontSize:13,color:"#2a2a2a",fontWeight:700,textTransform:"uppercase",marginTop:3 }}>{l}</div>
             </div>
           ))}
         </div>
@@ -740,12 +740,12 @@ export default function App() {
         {["overdue","sent","paid"].map(status=>{
           const filtered=invoices.filter((i:any)=>i.status===status); if(!filtered.length) return null;
           return <div key={status}>
-            <div style={{ fontSize:10,color:IC[status],fontWeight:700,textTransform:"uppercase",letterSpacing:1,marginBottom:8,marginTop:4 }}>{(t as any)[status]||status}</div>
+            <div style={{ fontSize:15,color:IC[status],fontWeight:700,textTransform:"uppercase",letterSpacing:1,marginBottom:8,marginTop:4 }}>{(t as any)[status]||status}</div>
             {filtered.map((inv:any)=>(
               <div key={inv.id} style={S.iCard(inv.status)}>
                 <div style={{ display:"flex",justifyContent:"space-between",alignItems:"flex-start" }}><div><div style={S.iName}>{inv.customerName}</div><div style={S.iType}>{inv.jobType}</div></div><span style={S.iStat(inv.status)}>{(t as any)[inv.status]||inv.status}</span></div>
                 <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center",marginTop:9 }}>
-                  <div><div style={S.iAmt(inv.status)}>{fmt(inv.amount)}</div><div style={{ fontSize:11,color:"#2a2a2a" }}>{lang==="zh"?"截止：":"Due: "}{inv.due}</div></div>
+                  <div><div style={S.iAmt(inv.status)}>{fmt(inv.amount)}</div><div style={{ fontSize:13,color:"#2a2a2a" }}>{lang==="zh"?"截止：":"Due: "}{inv.due}</div></div>
                 </div>
                 {!inv.paid&&(
                   <div style={S.iBtns}>
@@ -768,18 +768,18 @@ export default function App() {
       <div style={S.hdr}>
         <div style={S.logoRow}><div style={S.dot}/><div style={S.logo}>SimplyProject</div></div>
         <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center",paddingBottom:16 }}>
-          <div style={{ fontSize:20,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5 }}>{t.quotes} 📋</div>
-          <button style={{ padding:"7px 14px",background:ac,border:"none",borderRadius:11,color:"#0a0a0a",fontWeight:800,fontSize:12,cursor:"pointer" }} onClick={()=>setNewQuoteM(true)}>+</button>
+          <div style={{ fontSize:28,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5 }}>{t.quotes} 📋</div>
+          <button style={{ padding:"7px 14px",background:ac,border:"none",borderRadius:11,color:"#0a0a0a",fontWeight:800,fontSize:17,cursor:"pointer" }} onClick={()=>setNewQuoteM(true)}>+</button>
         </div>
       </div>
       <div style={{ padding:"14px 20px" }}>
-        {quotes.length===0?<div style={{ textAlign:"center",padding:"48px 0" }}><div style={{ fontSize:38,marginBottom:11 }}>📋</div><div style={{ fontSize:15,fontWeight:700,color:"#2a2a2a",marginBottom:7 }}>{t.no_quotes_h}</div><div style={{ fontSize:13,color:"#1e1e1e" }}>{t.no_quotes_s}</div></div>
+        {quotes.length===0?<div style={{ textAlign:"center",padding:"48px 0" }}><div style={{ fontSize:38,marginBottom:11 }}>📋</div><div style={{ fontSize:22,fontWeight:700,color:"#2a2a2a",marginBottom:7 }}>{t.no_quotes_h}</div><div style={{ fontSize:19,color:"#1e1e1e" }}>{t.no_quotes_s}</div></div>
         :quotes.map((q:any)=>(
           <div key={q.id} style={{ background:"#141414",borderRadius:16,padding:"13px 15px",marginBottom:9,borderLeft:`3px solid ${IC[q.status]||"#f59e0b"}` }}>
             <div style={{ display:"flex",justifyContent:"space-between" }}><div><div style={S.iName}>{q.customerName}</div><div style={S.iType}>{q.jobType}</div></div><span style={S.iStat(q.status||"pending")}>{(t as any)[q.status]||q.status}</span></div>
             <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center",marginTop:9 }}>
               <div style={S.iAmt("sent")}>{fmt(q.amount)}</div>
-              {q.status==="pending"&&<button style={{ padding:"8px 13px",background:ac,border:"none",borderRadius:10,color:"#0a0a0a",fontWeight:800,fontSize:12,cursor:"pointer" }} onClick={()=>quoteToJob(q)}>{t.convert_btn}</button>}
+              {q.status==="pending"&&<button style={{ padding:"8px 13px",background:ac,border:"none",borderRadius:10,color:"#0a0a0a",fontWeight:800,fontSize:17,cursor:"pointer" }} onClick={()=>quoteToJob(q)}>{t.convert_btn}</button>}
             </div>
           </div>
         ))}
@@ -793,8 +793,8 @@ export default function App() {
       <div style={S.hdr}>
         <div style={S.logoRow}><div style={S.dot}/><div style={S.logo}>SimplyProject</div></div>
         <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center",paddingBottom:16 }}>
-          <div style={{ fontSize:20,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5 }}>{t.clients} 👥</div>
-          <button style={{ padding:"7px 14px",background:ac,border:"none",borderRadius:11,color:"#0a0a0a",fontWeight:800,fontSize:12,cursor:"pointer" }} onClick={()=>setNewCustM(true)}>+</button>
+          <div style={{ fontSize:28,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5 }}>{t.clients} 👥</div>
+          <button style={{ padding:"7px 14px",background:ac,border:"none",borderRadius:11,color:"#0a0a0a",fontWeight:800,fontSize:17,cursor:"pointer" }} onClick={()=>setNewCustM(true)}>+</button>
         </div>
       </div>
       <div style={{ padding:"14px 20px" }}>
@@ -803,12 +803,12 @@ export default function App() {
           return <div key={c.id} style={S.cCard}>
             <div style={{ display:"flex",justifyContent:"space-between",alignItems:"flex-start" }}>
               <div>
-                <div style={{ fontSize:15,fontWeight:800,color:"#f0ede8" }}>{c.name}</div>
-                <div style={{ fontSize:12,color:"#444",marginTop:2 }}>{c.phone}</div>
-                <div style={{ fontSize:11,color:"#2a2a2a",marginTop:2 }}>📍 {c.address}</div>
-                {c.notes&&<div style={{ fontSize:11,color:"#2a2a2a",marginTop:3,fontStyle:"italic" }}>💬 {c.notes}</div>}
+                <div style={{ fontSize:24,fontWeight:800,color:"#f0ede8" }}>{c.name}</div>
+                <div style={{ fontSize:22,color:"#444",marginTop:2 }}>{c.phone}</div>
+                <div style={{ fontSize:17,color:"#2a2a2a",marginTop:2 }}>📍 {c.address}</div>
+                {c.notes&&<div style={{ fontSize:17,color:"#2a2a2a",marginTop:3,fontStyle:"italic" }}>💬 {c.notes}</div>}
               </div>
-              {bal>0?<div style={{ fontSize:13,color:"#f87171",fontWeight:800 }}>{t.owes} {fmt(bal)}</div>:<div style={{ fontSize:11,color:"#22c55e",fontWeight:700 }}>{t.all_clear}</div>}
+              {bal>0?<div style={{ fontSize:19,color:"#f87171",fontWeight:800 }}>{t.owes} {fmt(bal)}</div>:<div style={{ fontSize:17,color:"#22c55e",fontWeight:700 }}>{t.all_clear}</div>}
             </div>
             <div style={S.cBtns}>
               <button style={S.cBtn("#25D366")} onClick={()=>window.open(`https://wa.me/${c.phone.replace(/\s/g,"").replace(/^0/,"61")}`,"_blank")}>💬 WA</button>
@@ -828,45 +828,45 @@ export default function App() {
     <>
       <div style={S.hdr}>
         <div style={S.logoRow}><div style={S.dot}/><div style={S.logo}>SimplyProject</div></div>
-        <div style={{ fontSize:20,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5,paddingBottom:16 }}>{t.settings_h}</div>
+        <div style={{ fontSize:28,fontWeight:900,color:"#f0ede8",letterSpacing:-0.5,paddingBottom:16 }}>{t.settings_h}</div>
       </div>
       <div style={{ padding:"14px 20px" }}>
         <div style={{ background:"#141414",borderRadius:16,padding:"16px",marginBottom:12 }}>
-          <div style={{ fontSize:14,fontWeight:800,color:"#f0ede8",marginBottom:2 }}>{t.lang_setting}</div>
-          <div style={{ fontSize:12,color:"#444",marginBottom:14 }}>{t.lang_sub}</div>
+          <div style={{ fontSize:22,fontWeight:800,color:"#f0ede8",marginBottom:2 }}>{t.lang_setting}</div>
+          <div style={{ fontSize:17,color:"#444",marginBottom:14 }}>{t.lang_sub}</div>
           <div style={{ display:"grid",gridTemplateColumns:"1fr 1fr",gap:9 }}>
             {[["en","🇦🇺 English"],["zh","🇨🇳 中文"]].map(([k,lbl])=>(
-              <button key={k} onClick={()=>setLang(k as any)} style={{ padding:"12px",background:lang===k?ac:"#1a1a1a",border:lang===k?"none":"1px solid #222",borderRadius:11,color:lang===k?"#0a0a0a":"#666",fontWeight:800,fontSize:14,cursor:"pointer" }}>{lbl}</button>
+              <button key={k} onClick={()=>setLang(k as any)} style={{ padding:"12px",background:lang===k?ac:"#1a1a1a",border:lang===k?"none":"1px solid #222",borderRadius:11,color:lang===k?"#0a0a0a":"#666",fontWeight:800,fontSize:22,cursor:"pointer" }}>{lbl}</button>
             ))}
           </div>
         </div>
         <div style={{ background:"#141414",borderRadius:16,padding:"16px",marginBottom:12 }}>
-          <div style={{ fontSize:14,fontWeight:800,color:"#f0ede8",marginBottom:2 }}>{t.color_setting}</div>
-          <div style={{ fontSize:12,color:"#444",marginBottom:14 }}>{t.color_sub}</div>
+          <div style={{ fontSize:22,fontWeight:800,color:"#f0ede8",marginBottom:2 }}>{t.color_setting}</div>
+          <div style={{ fontSize:17,color:"#444",marginBottom:14 }}>{t.color_sub}</div>
           <div style={{ display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:9 }}>
             {Object.entries(THEMES).map(([k,th]:any)=>(
               <button key={k} onClick={()=>setThemeKey(k)} style={{ padding:"11px 8px",background:"#1a1a1a",border:themeKey===k?`2px solid ${th.hex}`:"1px solid #222",borderRadius:11,cursor:"pointer",display:"flex",flexDirection:"column",alignItems:"center",gap:6 }}>
                 <div style={{ width:28,height:28,borderRadius:"50%",background:th.hex,boxShadow:themeKey===k?`0 0 0 3px ${th.hex}40`:"none" }}/>
-                <div style={{ fontSize:11,fontWeight:700,color:themeKey===k?th.hex:"#555" }}>{lang==="zh"?th.zh:th.label}</div>
+                <div style={{ fontSize:17,fontWeight:700,color:themeKey===k?th.hex:"#555" }}>{lang==="zh"?th.zh:th.label}</div>
               </button>
             ))}
           </div>
         </div>
         <div style={{ background:"#141414",borderRadius:16,padding:"16px",marginBottom:12,display:"flex",justifyContent:"space-between",alignItems:"center" }}>
-          <div><div style={{ fontSize:14,fontWeight:800,color:"#f0ede8",marginBottom:2 }}>{t.cal_setting}</div><div style={{ fontSize:12,color:"#444" }}>{t.cal_sub}</div></div>
+          <div><div style={{ fontSize:22,fontWeight:800,color:"#f0ede8",marginBottom:2 }}>{t.cal_setting}</div><div style={{ fontSize:22,color:"#444" }}>{t.cal_sub}</div></div>
           <div onClick={()=>setCalView(v=>!v)} style={{ width:48,height:28,borderRadius:14,background:calView?ac:"#2a2a2a",cursor:"pointer",position:"relative",transition:"background 0.2s",flexShrink:0 }}>
             <div style={{ position:"absolute",top:3,left:calView?22:3,width:22,height:22,borderRadius:"50%",background:"#fff",transition:"left 0.2s" }}/>
           </div>
         </div>
         <div style={{ background:"#141414",borderRadius:16,padding:"16px",marginBottom:12,display:"flex",justifyContent:"space-between",alignItems:"center",cursor:"pointer" }} onClick={()=>setAppScreen("trade")}>
-          <div><div style={{ fontSize:14,fontWeight:800,color:"#f0ede8",marginBottom:2 }}>{t.trade_setting}</div><div style={{ fontSize:12,color:"#444" }}>{indName(ind)} {ind.icon}</div></div>
-          <div style={{ fontSize:18,color:"#333" }}>›</div>
+          <div><div style={{ fontSize:22,fontWeight:800,color:"#f0ede8",marginBottom:2 }}>{t.trade_setting}</div><div style={{ fontSize:17,color:"#444" }}>{indName(ind)} {ind.icon}</div></div>
+          <div style={{ fontSize:24,color:"#333" }}>›</div>
         </div>
         <div style={{ background:"#141414",borderRadius:16,padding:"16px",marginBottom:12 }}>
-          <div style={{ fontSize:14,fontWeight:800,color:"#f0ede8",marginBottom:6 }}>{t.about_setting}</div>
-          <div style={{ fontSize:12,color:"#333" }}>{t.version_val}</div>
-          <div style={{ fontSize:12,color:"#222",marginTop:2 }}>simplyproject.com.au</div>
-          <button onClick={()=>setAppScreen("landing")} style={{ marginTop:14,width:"100%",padding:"11px",background:"#1a1a1a",border:"1px solid #1e1e1e",borderRadius:11,color:"#555",fontSize:13,fontWeight:700,cursor:"pointer" }}>← View Landing Page</button>
+          <div style={{ fontSize:22,fontWeight:800,color:"#f0ede8",marginBottom:6 }}>{t.about_setting}</div>
+          <div style={{ fontSize:14,color:"#333" }}>{t.version_val}</div>
+          <div style={{ fontSize:13,color:"#222",marginTop:2 }}>simplyproject.com.au</div>
+          <button onClick={()=>setAppScreen("landing")} style={{ marginTop:14,width:"100%",padding:"11px",background:"#1a1a1a",border:"1px solid #1e1e1e",borderRadius:11,color:"#555",fontSize:19,fontWeight:700,cursor:"pointer" }}>← View Landing Page</button>
         </div>
       </div>
       <div style={{ height:90 }}/>
@@ -893,7 +893,7 @@ export default function App() {
       <div style={S.nav}>
         {NAV.map(n=>(
           <div key={n.id} style={S.nItem(screen===n.id)} onClick={()=>setScreen(n.id)}>
-            <div style={{ fontSize:19 }}>{n.icon}</div>
+            <div style={{ fontSize:28 }}>{n.icon}</div>
             <div style={S.nLbl(screen===n.id)}>{n.lbl}</div>
           </div>
         ))}
@@ -908,11 +908,11 @@ export default function App() {
               <div style={S.sTitle}>{t.voice_title}</div>
               <div style={S.sSub}>{t.voice_sub}</div>
               <div style={{ background:"#0a0a0a",borderRadius:11,padding:"11px",marginBottom:18,border:"1px solid #1a1a1a" }}>
-                <div style={{ fontSize:10,color:"#2a2a2a",fontWeight:700,textTransform:"uppercase",letterSpacing:0.8,marginBottom:7 }}>{t.try_saying}</div>
-                {(VOICE_SAMPLES[indKey!]||VOICE_SAMPLES.other).map((s:string,i:number)=><div key={i} style={{ fontSize:12,color:"#444",padding:"6px 0",borderBottom:"1px solid #141414",lineHeight:1.5 }}>{s}</div>)}
+                <div style={{ fontSize:15,color:"#2a2a2a",fontWeight:700,textTransform:"uppercase",letterSpacing:0.8,marginBottom:7 }}>{t.try_saying}</div>
+                {(VOICE_SAMPLES[indKey!]||VOICE_SAMPLES.other).map((s:string,i:number)=><div key={i} style={{ fontSize:17,color:"#444",padding:"6px 0",borderBottom:"1px solid #141414",lineHeight:1.5 }}>{s}</div>)}
               </div>
               <button style={S.micBtn("idle")} onClick={startVoice}>🎙️</button>
-              <div style={{ textAlign:"center",color:"#2a2a2a",fontSize:12,marginBottom:18 }}>{t.tap_start}</div>
+              <div style={{ textAlign:"center",color:"#2a2a2a",fontSize:17,marginBottom:18 }}>{t.tap_start}</div>
               <button style={S.bigBtn("transparent")} onClick={()=>setVModal(false)}>{t.cancel}</button>
             </>}
             {vState==="listening"&&<>
@@ -960,7 +960,7 @@ export default function App() {
             <div style={S.fField}><label style={S.fLbl}>{t.addr_lbl}</label>{inp(jF.address,v=>setJF((p:any)=>({...p,address:v})),t.site_ph)}</div>
             <div style={S.fField}><label style={S.fLbl}>{t.time_lbl}</label>{inp(jF.time,v=>setJF((p:any)=>({...p,time:v})),"8:00 AM")}</div>
             <div style={S.fField}><label style={S.fLbl}>{t.notes_lbl}</label>{inp(jF.notes,v=>setJF((p:any)=>({...p,notes:v})),t.req_ph)}</div>
-            {jF.hours&&jF.rate&&<div style={S.fTotal}><span style={{fontSize:13,color:"#444"}}>{t.total_gst}</span><span style={{fontSize:16,fontWeight:900,color:ac}}>{fmt((Number(jF.hours)*Number(jF.rate)+Number(jF.materials||0))*1.1)}</span></div>}
+            {jF.hours&&jF.rate&&<div style={S.fTotal}><span style={{fontSize:19,color:"#444"}}>{t.total_gst}</span><span style={{fontSize:22,fontWeight:900,color:ac}}>{fmt((Number(jF.hours)*Number(jF.rate)+Number(jF.materials||0))*1.1)}</span></div>}
             <button style={S.bigBtn()} onClick={addJob}>{t.create_job_btn}</button>
             <button style={S.bigBtn("transparent")} onClick={()=>setNewJobM(false)}>{t.cancel}</button>
           </div>
@@ -980,7 +980,7 @@ export default function App() {
               <div style={S.fField}><label style={S.fLbl}>{t.mat_lbl}</label>{inp(iF.materials,v=>setIF((p:any)=>({...p,materials:v})),"0","number")}</div>
             </div>
             <div style={S.fField}><label style={S.fLbl}>{t.notes_lbl}</label>{inp(iF.notes,v=>setIF((p:any)=>({...p,notes:v})),t.opt_ph)}</div>
-            {(iF.labour||iF.materials)&&<div style={S.fTotal}><span style={{fontSize:13,color:"#444"}}>{t.total_gst}</span><span style={{fontSize:16,fontWeight:900,color:ac}}>{fmt((Number(iF.labour||0)+Number(iF.materials||0))*1.1)}</span></div>}
+            {(iF.labour||iF.materials)&&<div style={S.fTotal}><span style={{fontSize:19,color:"#444"}}>{t.total_gst}</span><span style={{fontSize:22,fontWeight:900,color:ac}}>{fmt((Number(iF.labour||0)+Number(iF.materials||0))*1.1)}</span></div>}
             <button style={S.bigBtn()} onClick={addInvoice}>{t.send_inv_btn}</button>
             <button style={S.bigBtn("transparent")} onClick={()=>setNewInvM(false)}>{t.cancel}</button>
           </div>
@@ -1000,7 +1000,7 @@ export default function App() {
               <div style={S.fField}><label style={S.fLbl}>{t.mat_lbl}</label>{inp(qF.materials,v=>setQF((p:any)=>({...p,materials:v})),"0","number")}</div>
             </div>
             <div style={S.fField}><label style={S.fLbl}>{t.notes_lbl}</label>{inp(qF.notes,v=>setQF((p:any)=>({...p,notes:v})),t.scope_ph)}</div>
-            {(qF.labour||qF.materials)&&<div style={S.fTotal}><span style={{fontSize:13,color:"#444"}}>{t.quote_total}</span><span style={{fontSize:16,fontWeight:900,color:ac}}>{fmt(Number(qF.labour||0)+Number(qF.materials||0))}</span></div>}
+            {(qF.labour||qF.materials)&&<div style={S.fTotal}><span style={{fontSize:19,color:"#444"}}>{t.quote_total}</span><span style={{fontSize:22,fontWeight:900,color:ac}}>{fmt(Number(qF.labour||0)+Number(qF.materials||0))}</span></div>}
             <button style={S.bigBtn()} onClick={addQuote}>{t.send_quote_btn}</button>
             <button style={S.bigBtn("transparent")} onClick={()=>setNewQuoteM(false)}>{t.cancel}</button>
           </div>
@@ -1029,27 +1029,27 @@ export default function App() {
           <div style={S.sheet}>
             <div style={S.handle}/>
             <div style={{ display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:14 }}>
-              <div><div style={S.sTitle}>{jobDetail.customerName}</div><div style={{fontSize:13,color:ac,fontWeight:700}}>{jobDetail.jobType}</div></div>
+              <div><div style={S.sTitle}>{jobDetail.customerName}</div><div style={{fontSize:19,color:ac,fontWeight:700}}>{jobDetail.jobType}</div></div>
               <span style={S.jStat(jobDetail.status)}>{jobDetail.status==="done"?t.done_status:jobDetail.status==="in-progress"?t.inprog_status:t.upcoming_status}</span>
             </div>
             <div style={S.aiCard}>
               {[["📍",jobDetail.address],["🕐",jobDetail.time],["💳",jobDetail.billing],["⏱",`${jobDetail.hours}hr`],[t.labour_row,fmt(jobDetail.labour)],[t.materials_row,jobDetail.materials>0?fmt(jobDetail.materials):t.none_val],["Total",fmt(jobDetail.labour+jobDetail.materials)]].map(([k,v])=>(
                 <div key={k} style={S.aiRow}><span style={S.aiK}>{k}</span><span style={S.aiV}>{v}</span></div>
               ))}
-              {jobDetail.notes&&<div style={{padding:"7px 0 2px",fontSize:12,color:"#2a2a2a",fontStyle:"italic"}}>💬 {jobDetail.notes}</div>}
+              {jobDetail.notes&&<div style={{padding:"7px 0 2px",fontSize:17,color:"#2a2a2a",fontStyle:"italic"}}>💬 {jobDetail.notes}</div>}
             </div>
 
             {/* PHOTOS */}
             <div style={{ marginBottom:14 }}>
               <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8 }}>
-                <div style={{ fontSize:11,fontWeight:700,color:"#333",textTransform:"uppercase",letterSpacing:1 }}>📸 {t.photos}</div>
-                <label style={{ fontSize:12,color:ac,fontWeight:700,cursor:"pointer" }}>
+                <div style={{ fontSize:17,fontWeight:700,color:"#333",textTransform:"uppercase",letterSpacing:1 }}>📸 {t.photos}</div>
+                <label style={{ fontSize:17,color:ac,fontWeight:700,cursor:"pointer" }}>
                   {t.add_photo}
                   <input ref={photoRef} type="file" accept="image/*" capture="environment" style={{display:"none"}} onChange={(e)=>handlePhoto(e,jobDetail.id)}/>
                 </label>
               </div>
               {(jobDetail.photos||[]).length===0
-                ?<div style={{ fontSize:12,color:"#2a2a2a",textAlign:"center",padding:"16px 0" }}>{t.no_photos}</div>
+                ?<div style={{ fontSize:17,color:"#2a2a2a",textAlign:"center",padding:"16px 0" }}>{t.no_photos}</div>
                 :<div style={{ display:"flex",gap:8,flexWrap:"wrap" }}>
                   {(jobDetail.photos||[]).map((ph:string,i:number)=>(
                     <img key={i} src={ph} style={{ width:80,height:80,borderRadius:10,objectFit:"cover",border:"1px solid #1e1e1e" }} alt="job photo"/>
